@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>mvvm</title>
+  </head>
+  <body>
+    
+    <div id="app">
+        <button lx-click="sayName">更改姓名</button>
+        <div>
+          <p lx-bind="intro">
+
+          </p>
+          介绍者：<span lx-bind="name"></span>
+        </div>
+        <!-- 测试setter/getter
+          hello,{{name}},<p>year: {{info.year}}</p>
+          <input type="text" l-model="name" />
+        -->
+        
+        <!-- 测试pub/sub 
+        <input type="number" data-bind-user="name" id="hello"/>  
+        <p data-bind-user="name"></p>-->
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./dirty.js"></script>
+  </body>
+</html>
