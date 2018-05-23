@@ -136,11 +136,11 @@ class Watcher {
 
 class Observer {
   constructor(data){
-    let dep = this.dep = new Dep();
     const keys = Object.keys(data);
     for(let key of keys){
       let value = data[key];
-
+      let dep = this.dep = new Dep();
+      
       observe(value);
 
       Object.defineProperty(data,key,{
